@@ -1,0 +1,40 @@
+﻿<Window x:Class="DiscordGuessCodeBot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DiscordGuessCodeBot"
+        mc:Ignorable="d"
+        Title="Bot" Height="345.349" Width="516.134" Closed="OnClosing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="33*"></RowDefinition>
+            <RowDefinition Height="124*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center">Code Guess Bot</TextBlock>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button FontSize="22" Click="StartBot">Start bot</Button>
+
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBox x:Name="tokenField" Grid.Row="0" VerticalAlignment="Center" FontSize="36"></TextBox>
+                <Button Grid.Row="1" Click="SetToken">Set token</Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
